@@ -1,0 +1,1 @@
+This is File A content which we will copy in File B 
