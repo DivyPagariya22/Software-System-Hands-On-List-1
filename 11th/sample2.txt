@@ -1,0 +1,4 @@
+This is written in Original File (dup2) 
+Hello This is written from Duplicate file  (dup2) 
+This is written in Original File (fcntl) 
+Hello This is written from Duplicate file  (fcntl) 
