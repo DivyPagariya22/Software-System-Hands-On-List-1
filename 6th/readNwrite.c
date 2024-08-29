@@ -1,3 +1,16 @@
+/*
+============================================================================
+Name : 6.c
+Author : Divy Pagariya
+Description : Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
+Date: 22th Aug, 2024.
+============================================================================
+*/
+
+
+
+
+
 #include <unistd.h>
 #include <fcntl.h>
 

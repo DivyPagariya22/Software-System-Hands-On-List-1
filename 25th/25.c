@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 25.c
+Author : Divy Pagariya
+Description : Write a program to create three child processes. The parent should wait for a particular child (use
+waitpid system call).
+Date: 27th Aug, 2024.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

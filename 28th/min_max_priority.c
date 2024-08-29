@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 28.c
+Author : Divy Pagariya
+Description : Write a program to get maximum and minimum real time priority.
+Date: 22th Aug, 2024.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sched.h>

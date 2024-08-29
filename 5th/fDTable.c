@@ -1,3 +1,15 @@
+/*
+============================================================================
+Name : 5.c
+Author : Divy Pagariya
+Description : Write a program to create five new files with infinite loop. Execute the program in the background
+and check the file descriptor table at /proc/pid/fd.
+Date: 22th Aug, 2024.
+============================================================================
+*/
+
+
+
 #include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>

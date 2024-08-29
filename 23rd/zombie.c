@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 23.c
+Author : Divy Pagariya
+Description : CWrite a program to create a Zombie state of the running program.
+Date: 27th Aug, 2024.
+============================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

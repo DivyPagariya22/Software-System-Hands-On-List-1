@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 24.c
+Author : Divy Pagariya
+Description : Write a program to create an orphan process.
+Date: 27th Aug, 2024.
+============================================================================
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

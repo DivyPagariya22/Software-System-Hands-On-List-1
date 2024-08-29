@@ -1,3 +1,14 @@
+/*
+============================================================================
+Name : 29.c
+Author : Divy Pagariya
+Description : Write a program to get scheduling policy and modify the scheduling policy (SCHED_FIFO,
+SCHED_RR).
+Date: 27th Aug, 2024.
+============================================================================
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
