@@ -62,7 +62,7 @@ int main() {
     set_lock(fd, F_WRLCK);
     printf("Write lock acquired. Reading and updating ticket number...\n");
 
-    // Read the ticket number from the file
+    
     if (read(fd, &ticket_number, sizeof(ticket_number)) == -1) {
         printf("Error while putting lock \n");
         remove_lock(fd);
@@ -70,10 +70,10 @@ int main() {
         return 0;
     }
 
-    // Increment the ticket number
+   
     ticket_number++;
 
-    // Move the file pointer back to the beginning of the file
+    
     if (lseek(fd, 0, SEEK_SET) == -1) {
         printf("Error while moving pointer in file \n");
         remove_lock(fd);
@@ -81,7 +81,7 @@ int main() {
         return 0;
     }
 
-    // Write the new ticket number back to the file
+    
     if (write(fd, &ticket_number, sizeof(ticket_number)) == -1) {
         printf("Error while writing ticket in file \n");
         remove_lock(fd);
@@ -91,11 +91,11 @@ int main() {
 
     printf("New ticket number %d written to file.\n", ticket_number);
 
-    // Release the write lock
+   
     remove_lock(fd);
     printf("Write lock released.\n");
 
-    // Close the file
+    
     close(fd);
     return 0;
 }

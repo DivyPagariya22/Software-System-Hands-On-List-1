@@ -28,10 +28,10 @@ int main() {
 
         sleep(5); // Makes child process go in zombie state
 
-        //Init Adopts it
+        
         printf("(when pid == 0) Child process: PID = %d, Parent PID = %d\n", getpid(), getppid());
 
-        // exit(0);
+        
 
     } else {
         printf("(when pid is positive) Parent process: PID = %d, Child PID = %d\n", getpid(), pid);

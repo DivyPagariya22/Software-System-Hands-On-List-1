@@ -53,7 +53,7 @@ int main() {
         return 0;
     }
 
-    // Verify the change
+    
     policy = sched_getscheduler(0);
     if (policy == -1) {
         printf("sched_getscheduler failed \n");
@@ -70,7 +70,6 @@ int main() {
         return 0;
     }
 
-    // Verify the change
     policy = sched_getscheduler(0);
     if (policy == -1) {
         printf("sched_getscheduler failed \n");

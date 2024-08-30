@@ -49,7 +49,6 @@ void create_farm(const char *filename) {
     close(fd);
 }
 
-// Function to implement a write lock
 void write_lock(int fd, off_t offset) {
     struct flock lock;
     lock.l_type = F_WRLCK;    // Write lock
@@ -93,7 +92,7 @@ void unlock(int fd, off_t offset) {
     }
 }
 
-// Function to modify a record
+
 void modify_farm(const char *filename, int animal_id, const char *new_animal) {
     int fd = open(filename, O_RDWR);
     if (fd == -1) {
@@ -103,10 +102,9 @@ void modify_farm(const char *filename, int animal_id, const char *new_animal) {
 
     off_t offset = (animal_id - 1) * sizeof(struct Farm);
     
-    // Lock the record for writing
+    
     write_lock(fd, offset);
 
-    // Read the current record
     struct Farm farm;
     lseek(fd, offset, SEEK_SET);
     if (read(fd, &farm, sizeof(struct Farm)) == -1) {
@@ -117,10 +115,9 @@ void modify_farm(const char *filename, int animal_id, const char *new_animal) {
 
     printf("Modifying Record %d: %s -> %s\n", farm.id, farm.data, new_animal);
     
-    // Modify the farm data
     strcpy(farm.data, new_animal);
     
-    // Write the modified farm back
+   
     lseek(fd, offset, SEEK_SET);
     if (write(fd, &farm, sizeof(struct Farm)) == -1) {
         perror("Error writing record");
@@ -128,13 +125,11 @@ void modify_farm(const char *filename, int animal_id, const char *new_animal) {
         exit(1);
     }
 
-    // Unlock the record
     unlock(fd, offset);
 
     close(fd);
 }
 
-// Function to read a record
 void read_farm(const char *filename, int animal_id) {
     int fd = open(filename, O_RDONLY);
     if (fd == -1) {
@@ -157,7 +152,6 @@ void read_farm(const char *filename, int animal_id) {
 
     printf("Read Record %d: %s\n", farm.id, farm.data);
 
-    // Unlock the record
     unlock(fd, offset);
 
     close(fd);
@@ -166,15 +160,15 @@ void read_farm(const char *filename, int animal_id) {
 int main() {
     const char *filename = "farm.dat";
 
-    // Create records
+    
     create_farm(filename);
 
     read_farm(filename, 2);
 
-    // Modify a record
+    
     modify_farm(filename, 2, "Dog");
 
-    // Read a record
+   
     read_farm(filename, 2);
 
     return 0;

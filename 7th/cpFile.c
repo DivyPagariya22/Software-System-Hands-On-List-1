@@ -25,7 +25,7 @@ int main() {
 
 	char buffer[BUFFER_SIZE];
 
-	// Create File 
+	
 	fd_source = open("file_a.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	
 	if(fd_source == -1) printf("Error while creating file \n");
@@ -39,7 +39,7 @@ int main() {
 
 
 
-	// open source file 
+	
 
 	fd_source = open("file_a.txt", O_RDONLY);
 

@@ -17,7 +17,7 @@ int main() {
 
     start = __builtin_ia32_rdtsc();
 
-    // Execute the getpid system call
+    
     getpid();
 
     
